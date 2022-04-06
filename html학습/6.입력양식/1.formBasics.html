@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Basics</title>
+</head>
+<body>
+    <h1>Log In</h1>
+    <!-- 입력 데이터를 어디에 전송할지 URL을 적는곳이 action -->
+    <!-- method, get(search)&post(security important) ? -->
+    <!-- get displays your id and password on the url -->
+    <!-- autocomplete: saves ur previous input -->
+    <!-- novalidate does not give a validation message -->
+    <form action="/login" method="post" autocomplete="off" novalidate> 
+        ID: <input name="id" type="text" placeholder="Enter your id"> <br>
+        <!-- type="email" automatically validates input -->
+        Email: <input name="id" type="email" placeholder="Enter your id"> <br>
+        PWD: <input name="pwd" type="password" placeholder="Enter your password"> <br>
+        <button type="submit">Log In</button>
+    </form>
+</body>
+</html>
