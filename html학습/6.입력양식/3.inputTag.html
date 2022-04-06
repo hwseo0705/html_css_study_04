@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Inputs</h1>
+        <!-- disabled does not let you input -->
+        <!-- value is shown on the screen, can be deleted -->
+        # Name: <input type="text" value="Haewon" disabled> <br>
+        # Password: <input type="password" placeholder="password"> <br>
+        # Email: <input type="email" placeholder="email"> <br>
+
+        <!-- you can check multiple with checkbox -->
+        # Hobby: 
+        <input type="checkbox"> Wakeboarding
+        <!-- checked is already going to be checked initially -->
+        <input type="checkbox" checked> Netflix
+        <input type="checkbox" disabled> Traveling <br>
+
+        <!-- radio selects only one, and name= has to be same to be in the same group -->
+        # Select One: 
+        <input type="radio" name="Select One"> Yes
+        <input type="radio" name="Select One"> No <br>
+
+        <!-- upload files from pc, multiple allows u to upload multiple files -->
+        # File:
+        <input type="file" multiple> <br>
+
+        <!-- range bar from 0 to 5, value is where the point is initially at -->
+        # Range: 
+        <input type="range" min="0" max="10" value="3"> <br>
+
+        <!-- min/max available -->
+        # Amount:
+        <input type="number" value="1" min="0"> <br>
+
+        <!-- 사용자 몰래 서버로 전송할 데이터 -->
+        <!-- when user does not have to enter but server needs to know -->
+        # Hidden: (users can't see) 
+        <input type="hidden" name="abc" value="LMAO"> <br>
+
+        <!-- Drop down menu with options -->
+        # Drop-down: 
+        <select name="Select" id="Select">
+            <option value="None">None</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+        </select>
+        
+        <!-- BUTTONS -->
+        <h1>Buttons</h1>
+        <button type="button">Regular Button</button>
+        <button type="reset">Reset Button</button>
+        <button type="submit">Submit Button</button>
+    </form>
+</body>
+</html>

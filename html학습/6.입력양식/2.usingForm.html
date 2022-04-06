@@ -8,11 +8,19 @@
 </head>
 <body>
     <!-- making the search on this page open naver to search -->
-    <form action="https://search.naver.com/search.naver">
+    <h1>Naver Search</h1>
+    <form action="https://search.naver.com/search.naver" >
         <!-- the search on naver uses query=SEARCH_INPUT -->
         <!-- so you add name= on input -->
-        <input type="text" name="query">
+        <input type="text" name="query" placeholder="Haewon is having fun">
         <button type="submit">Search</button>
+    </form>
+
+    <h1>Log In</h1>
+    <form action="https://nid.naver.com/nidlogin.login" method="POST">
+        <input type="text" name="id" placeholder="id"> <br>
+        <input type="password" name="pw" placeholder="password"> <br>
+        <button type="submit">Log In</button>
     </form>
 </body>
 </html>
