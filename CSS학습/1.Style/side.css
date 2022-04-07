@@ -1,0 +1,7 @@
+h2 {
+    color:rgb(2, 123, 82);
+    font-style: italic;
+    background: rgb(153, 139, 243);
+    letter-spacing: 5px;
+    width:max-content
+}

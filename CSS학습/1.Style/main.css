@@ -1,0 +1,8 @@
+/* this import will allow you to "link" h1 and h2 together */
+@import url('./side.css');
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: fantasy;
+    color: tomato;
+}

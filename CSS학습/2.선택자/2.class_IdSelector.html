@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and ID</title>
+    <style>
+        /* class uses '.' id uses '#' */
+        #big {
+            font-size: 3em;
+        }
+        .orange {
+            color: orange;
+            font-size: 1.5em;
+        }
+        .reverse {
+            transform: rotate(180deg);
+            width: fit-content;
+        }
+        .shadow {
+            text-shadow: 3px 3px 5px rgb(187, 233, 149);
+        }
+        /* all p and span will have this style */
+        p, span { 
+            font-style: italic;
+        }
+        /* all heads will not be bold */
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        .orange, #big {
+            /* this thing works too */
+            /* if i were to write 'color: blue;' here */
+            /* it will no longer be orange, will be blue */
+        }
+    </style>
+</head>
+<body>
+    <!-- div>(ul>li*3)+div+p+span -->
+    <!-- '+' is sibling -->
+    <!-- you could use css style to change 'Orange' color -->
+    <!-- but it gets complicatedd so use 'class=orange' -->
+    <!-- and use 'id' to change that specific one only -->
+    <!-- id should be UNIQUE!!! -->
+    <div class="shadow">
+        <ul>
+            <li>Apple</li>
+            <li class="reverse">Strawberry</li>
+            <li class="orange reverse" id="big">Orange</li>
+        </ul>
+        <div>Carrot</div>
+        <p>Tomato</p>
+        <span class="orange">Orange</span>
+
+        <!-- '.' for class, '#' for id -->
+        <!-- h1.reverse#small automatic-->
+        <h1 class="reverse" id="small">Pineapple</h1>
+        <!-- h2.shadow.reverse -->
+        <h2 class="shadow reverse">Watermelon</h2>
+    </div>
+</body>
+</html>
