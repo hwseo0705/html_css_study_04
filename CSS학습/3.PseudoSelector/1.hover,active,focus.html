@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,11 +14,56 @@
             font-weight: bold;
             color: red;
         }
+
+        .box {
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            background: orange;
+            /* animation speed control, holy shit this is cool hehe */
+            transition: 0.7s;
+        }
+
+        /* when u hover over the box, it expands */
+        .box:hover {
+            width: 200px;
+        }
+
+        /* when u r clicking on it, it expands */
+        .box:active {
+            height: 200px;
+            background: yellowgreen;
+        }
+
+        /* creating a input box */
+        #common {
+            width: 100px;
+            border: 1px solid gray;
+            outline: none;
+            padding: 5px 10px;
+            margin-top: 20px;
+            transition: 0.6s;
+        }
+        /* changes when you are 'focusing' on the att */
+        #common:focus {
+            border-color: red;
+            width: 200px;
+        }
     </style>
 
 </head>
+
 <body>
-    <!-- hover: 요소에 마우스를 올렸을때 -->
+    <!-- HOVER: when you hover over the att. -->
     <a href="#">Hello!</a>
+    <div class="box"></div>
+
+    <!-- ACTIVE: when you are clicking on the att. -->
+    <div class="box"></div>
+
+    <!-- FOCUS: focusing(tab, click) on a certain att -->
+    <input type="text" id="common">
+
 </body>
+
 </html>

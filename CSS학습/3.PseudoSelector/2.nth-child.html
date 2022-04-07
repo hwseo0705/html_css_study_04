@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* first child of id="fruits" */
+        #fruits li:first-child {
+            color: red;
+        }
+
+        /* last child of id="fruits" */
+        #fruits li:last-child {
+            color: yellowgreen;
+        }
+
+        /* 5th child of id="fruits" */
+        #fruits li:nth-child(5) {
+            color: rgb(161, 161, 33);
+        }
+
+        /* odd # children of id="fruits" */
+        #fruits li:nth-child(odd) { /* or 2n + 1 */
+            background: aqua;
+        }
+
+        /* even # children of id="fruits" */
+        #fruits li:nth-child(even) { /* or 2n */
+            background: violet;
+        }
+
+        /* 1,4,7th children of id="fruits" */
+        #fruits li:nth-child(3n + 1) {
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        /* everything except for class orang */
+        #fruits li:not(.orang) {
+            font-size: 1.5em;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- ul#fruits>li*7 -->
+    <ul id="fruits">
+        <li>Strawberry</li>
+        <li>Apple</li>
+        <li class="orang">Orange</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Grapefruit</li>
+        <li>Lime</li>
+    </ul>
+</body>
+
+</html>

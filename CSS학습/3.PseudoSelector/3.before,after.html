@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before After</title>
+
+    <style>
+    /* CAUTION
+    1. before and after are necessary even if you don't wanna add any content 
+    2. 'display' needed to show shapes
+    */
+
+        /* adds the content before the content that's already in 'li' */
+        li::before {
+            content: 'Number: ';
+        }
+
+        /* adds the content after the content that's already in 'li' */
+        li::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: red;
+            /* inline-block to make the shape come next to the content */
+            /* block has a 'new line' */
+            display: inline-block;
+            margin-left: 10px;
+            /* in order to create a circle */
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- ul>li{$}*10 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+</body>
+</html>
