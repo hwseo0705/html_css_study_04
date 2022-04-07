@@ -43,7 +43,7 @@
 
         /* 5. */
         /* second child of id="list" */
-        #list li:first-child+li {
+        #list li:nth-child(2) {
             font-style: italic;
             ;
         }
@@ -61,35 +61,27 @@
         }
 
         /* using class */
-        /* 6.2 */
-
-
-        /* 7.2 */
-        .third:last-child {
-            /* border: 2px dashed violet */
-        }
-
+        /* just put appropriate class names */
+        
     </style>
 
 </head>
 
-<body>
-
-
-
+<body></body>
 
     <!-- #wrap>ul#list>li{LIST$}*7 -->
     <div id="wrap">
         <ul id="list">
             <li>LIST1</li>
             <li>LIST2</li>
-            <li class="third">LIST3</li>
+            <li>LIST3</li>
             <li>LIST4</li>
             <li>LIST5</li>
             <li>LIST6</li>
             <li>LIST7</li>
         </ul>
     </div>
+    
 </body>
 
 </html>
