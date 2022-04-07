@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Selector</title>
+    <style>
+        /* second selector is the target, first is the condition */
+        /* we only wanna give the condition to the class 'orange' */
+        /* but that orange class has to be the children of ul */
+        ul > .orange {
+            color: orange;
+        }
+        /* this will make the 'orange' in span to change color */
+        /* has to be a direct child */
+        div > .orange {
+            color: blue;
+        }
+        /* it's saying .shadow's child p has to change */
+        /* tomato changes */
+        .shadow > p {
+            font-style: italic;
+        }
+        /* div.shadow > p works */
+        div.shadow > p {
+            color: red;
+        }
+        em {
+            font-size: 30px;
+        }
+        div > em {
+            color: green;
+        }
+
+        div > p > em {
+            color: rgb(207, 224, 14);
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <em>Hello Hello</em>
+    <div class="shadow">
+        <em>Nice Nice</em>
+        <ul>
+            <li id="apple">Apple</li>
+            <li class="reverse">Strawberry</li>
+            <li class="orange reverse" id="big">Orange</li>
+        </ul>
+        <div>Carrot</div>
+        <p>Tomato <em>mato</em></p>
+        <span class="orange">Orange</span>
+
+    </div>
+</body>
+</html>

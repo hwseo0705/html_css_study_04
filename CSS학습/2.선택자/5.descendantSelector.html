@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Selector</title>
+    <style>
+
+        /* condition > target */
+        /* this one does not change anything because div.orange is */
+        /* 일치선택자 which has to be exact, span.orange instead */
+        div.orange {
+            color: orange;
+        }
+        /* this one changes both because it means the parent should congain div */
+        /* all the descendants of div with .orange will change */
+        div .orange {
+            color: blue;
+        }
+        /* direct children .orange only */
+        div > .orange {
+            font-size: 30px;
+        }
+        /* this only colors the bottom orange */
+        /* has to be the descendant of body but also contain span and .orange */
+        /* body span .orange does not work because it has to be the descendant of span */
+        /* however span does not have any descendants */
+        body span.orange  {
+            background: powderblue;
+        }
+        /* this will select all the descendants of class 'shadow' */
+        .shadow * {
+            font-style: italic;
+        }
+        /* all the direct children */
+        .shadow > * {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <em>Hello Hello</em>
+    <div class="shadow">
+        <em>Nice Nice</em>
+        <ul>
+            <li id="apple">Apple</li>
+            <li class="reverse">Strawberry</li>
+            <li class="orange reverse" id="big">Orange</li>
+        </ul>
+        <div>Carrot</div>
+        <p>Tomato <em>mato</em></p>
+        <span class="orange">Orange</span>
+
+    </div>
+</body>
+</html>

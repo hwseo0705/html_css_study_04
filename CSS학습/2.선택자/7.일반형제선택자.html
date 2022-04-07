@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nothing has a prev sibling called .orang except for Grapefruit and Grpae */
+        .orang~li {
+            background: orangered;
+        }
+        /* this will work with the top commented ul class="orang"
+        /* this will turn everything powderblue */
+        .orang li {
+            background: powderblue;
+        } 
+    </style>
+</head>
+
+<body>
+    <!-- <ul class="orang"> -->
+    <ul>
+        <li>Apple</li>
+        <li>Strawberry</li>
+        <li class="orang">Orange</li>
+        <li>Grapefruit</li>
+        <li>Grape</li>
+    </ul>
+</body>
+
+</html>

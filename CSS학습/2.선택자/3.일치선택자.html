@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and ID</title>
+    <style>
+        /* selects a specific/unique one containing both li and ornage */
+        li.orange {
+            color: blueviolet;
+        }
+        span.orange{
+            background: rgb(196, 157, 232);
+        }
+        /* li#apple will work too */
+        #apple {
+            background: red;
+        }
+        /* this one will not work */
+        div#apple {
+            background: yellow;
+        }
+        /* have to contain consecutive names, not including 'fruits' works  */
+        /* multiple conditions: must be h1, contain yellow, low, primary */
+        /* also must contain id named 'change' */
+        h1.yellow.low.primary#change {
+            background: yellow;
+        }
+        aside.banner.image#roll {
+           border: 1px solid red;
+           width: 300px;
+           height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow">
+        <ul>
+            <li id="apple">Apple</li>
+            <li class="reverse">Strawberry</li>
+            <li class="orange reverse" id="big">Orange</li>
+        </ul>
+        <div>Carrot</div>
+        <p>Tomato</p>
+        <span class="orange">Orange</span>
+        <h1 id="change" class="fruits yellow low primary">Pineapple</h1>
+        <aside id="roll" class="aside banner image"></aside>
+    </div>
+</body>
+</html>

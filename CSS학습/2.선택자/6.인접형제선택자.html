@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* '+' = next direct sibling */
+        /* '+' moves to the li after class 'orang' */
+        /* last one is the target, first condition */
+        .orang + li {
+            color: orangered;
+        }
+        /* this goes to .orang with a previous sibling li*/
+        /* this one does not work on the first class 'orang' */
+        /* since it has no prev sibling li */
+        li + .orang {
+            color: orange;
+        }
+        /* this changes all but the first 'li' because it's changing the 'target li' */
+        /* which is the second li and the second li should have a prev sibling 'li' */
+        /* the first one has no previous sibling*/
+        /* this thing can be used in tr to edit all rows on the table except for the first head row */
+        li + li {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="orang">Oooorrraaangggeee</li>
+        <li>Apple</li>
+        <li>Strawberry</li>
+        <li class="orang">Orange</li>
+        <li>Grapefruit</li>
+        <li>Grape</li>
+    </ul>
+</body>
+</html>
