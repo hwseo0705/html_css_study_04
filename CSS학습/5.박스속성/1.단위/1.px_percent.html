@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel & Percent </title>
+    <!-- can use pixel and percent in any size att. -->
+    <!-- if you keep the widths pixel, it is fixed so it won't change
+        when the web size changes -->
+    <style>
+        div {
+            border: 2px solid gray;
+        }
+
+        .root {
+            width: 80%;
+        }
+
+        .parent {
+            /* percent: compared to parent
+                it is 50% width of its parent(root) */
+            width: 50%;
+        }
+
+        .child {
+            width: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- .root>.parent>.child*2 -->
+    <div class="root"> Root
+        <div class="parent"> Parent
+            <div class="child">Child 1</div>
+            <div class="child">Child 2</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            color: blue;
+            /* color: blue !important; */
+        }
+
+        #c-y {
+            color: yellow;
+        }
+
+        .c-g {
+            color: green;
+        }
+
+        body {
+            color: aqua;
+        }
+
+        div {
+            color: red;
+        }
+
+        /* order of priority 
+            lowest priority to highest */
+
+        /* #### higher point will have a higher priority #### */
+
+        /* myself -- 1 point */
+        h1 {
+            color: lightcoral;
+        }
+
+        /* class myself -- 10 points + 1 point = 11 points */
+        .bbb h1 {
+            color: orangered;
+            /* color: blueviolet !important; */
+        }
+
+        /* 1 point + 10 points + 1 point = 12 points */
+        div.bbb>h1 {
+            color: blue;
+        }
+
+        /* id myself -- 100 points + 1 point = 101 points */
+        #aaa h1 {
+            color: blueviolet;
+            /* color: blueviolet !important; */
+        }
+
+        /* id class myself -- 100 points + 10 points + 1 point = 111 points  */
+        #aaa .bbb h1 {
+            color: tomato;
+        }
+
+        /* more specific? -- 100 points + 1 point + 10 points + 1 point = 112 points */
+        #aaa div.bbb h1 {
+            color: greenyellow;
+            /* color: blueviolet !important; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- !important -> inline -> id -> class -> tag -> all -->
+
+    <!-- div was changed multiple times due to priority
+        inline-style has high priority -->
+    <div id="c-y" class="c-g" style="color: orange">Hello 1</div>
+
+    <!-- id has higher priority than class and tag -->
+    <div id="c-y" class="c-g">Hello 2</div>
+
+    <!-- class has higher priority than tags -->
+    <div class="c-g">Hello 3</div>
+
+    <!--  the last 'div' has priority -->
+    <div>Hello 4</div>
+
+    <!-- this will just follow body-style -->
+    <section>Hello 5</section>
+
+    <hr>
+
+    <!-- inheritance is less imp than child itself 
+        even if div has '!importnat' h1 will override.
+        However, priority will be #aaa > .bbb > h1 in this case.
+    -->
+    <!-- #aaa>.bbb>h1{Hello 6} -->
+    <div id="aaa">
+        <div class="bbb">
+            <h1>Hello 6</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

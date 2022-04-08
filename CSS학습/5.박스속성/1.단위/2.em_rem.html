@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM & REM</title>
+
+    <style>
+        /* this one is hidden. if I change this to 10px, 
+            then html default size also changes to 10px instead of 16px
+            but if you gon do this, make the body 16px so that it doesn't affect the whole thing */
+        /* html {
+            font-size: 16px;
+        }
+        body {
+            font-size: 16px;
+        } */
+        div {
+            border: 2px solid gray;
+        }
+
+        .root {
+            /* em: font-size ratio of itself */
+            /* rem: font-size ratio relative to html(16px default) */
+            /* 800px if font-size: 16px which is default / 500px if font-size: 10px */
+            width: 50em; /* 50 X 20 = 1000px */
+            width: 50rem; /* 50 X 16 = 800px */
+            font-size: 20px;
+        }
+
+        .parent {
+            width: 50%;
+        }
+
+        .child {
+            width: 50%;
+        }
+
+        p {
+            border: 2px solid red;
+            padding: 15px;
+            line-height: 1.5;
+            /* width? */
+            width: 20em;
+            font-size: 20px;
+        }
+
+        p>strong {
+            color: red;
+            /* 10% bigger even if the font-size changes */
+            font-size: 1.1em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="root"> Root
+        <div class="parent"> Parent
+            <div class="child">Child 1</div>
+            <div class="child">Child 2</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <p>
+        <!--Lorem Ipsum  -->
+        국회는 <strong>헌법개정안</strong>이 공고된 날로부터 60일 이내에 의결하여야 하며, 국회의 의결은 재적의원 3분의 2 이상의 찬성을 얻어야 한다. 국회는 헌법 또는 법률에 특별한 규정이
+        없는 한 재적의원 과반수의
+        출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된
+        때에는 그러하지 아니하다.
+
+        행정각부의 설치·조직과 직무범위는 법률로 정한다. 대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다. 국회의원은 국가이익을
+        우선하여 양심에 따라 직무를 행한다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다.
+
+        국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 사회적 특수계급의 제도는 인정되지 아니하며, 어떠한 형태로도 이를 창설할 수 없다. 대통령이 임시회의 집회를 요구할 때에는 기간과
+        집회요구의 이유를 명시하여야 한다. 대법원장은 국회의 동의를 얻어 대통령이 임명한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+
+        국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 대통령은 내란 또는 외환의 죄를 범한 경우를 제외하고는 재직중 형사상의 소추를 받지 아니한다. 중앙선거관리위원회는 대통령이
+        임명하는 3인, 국회에서 선출하는 3인과 대법원장이 지명하는 3인의 위원으로 구성한다. 위원장은 위원중에서 호선한다.
+
+        대법원장과 대법관이 아닌 법관은 대법관회의의 동의를 얻어 대법원장이 임명한다. 외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 저작자·발명가·과학기술자와 예술가의 권리는 법률로써
+        보호한다. 이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다.
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .eco {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+
+            /* inheritance */
+            color: dodgerblue;
+            font-weight: bold;
+        }
+
+        .animal {
+            width: 200px;
+            height: 200px;
+            background: rgb(228, 185, 105);
+
+            /* inheritance */
+            color: rgb(154, 87, 0);
+        }
+
+        .plant {
+            width: 200px;
+            height: 200px;
+            background: rgb(108, 217, 108);
+            
+            /* inheritance */
+            color: rgb(201, 13, 201); 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- class eco's children (class animal and class plant)-->
+    <!-- () are siblings and plant has 3 div children -->
+    <!-- .eco>.animal+(.plant>div*3) -->
+    <div class="eco"> Ecosystem
+        <div class="animal">Animal</div>
+        <div class="plant">
+            <div>Pine Tree</div>
+            <div>Tulip</div>
+            <div>Sunflower</div>
+        </div>
+    </div>
+
+    <!-- answer: 21, 101, 1, 21, 11, 22, 10, 1 -->
+    <!-- :: -> 1점, : -> 10점 -->
+    <!-- not 0점 -->
+
+</body>
+
+</html>
