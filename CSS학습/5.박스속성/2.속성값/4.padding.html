@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background: orange;
+            margin-left: 100px;
+            /* the container expands according to the padding size */
+            padding-left: 100px; /* try 500px */
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+        .box {
+            width: 250px;
+            height: 250px;
+            background: tomato;
+            color: white;
+            font-size: 2em;
+            /* same thing aspadding: 30px 0 0 20px; */
+            padding-top: 30px;
+            padding-left: 20px;
+            /* how to not expand when using padding */
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- .container>.box{Hello} -->
+    <div class="container">
+        <div class="box">Hello</div>
+    </div>
+</body>
+</html>
