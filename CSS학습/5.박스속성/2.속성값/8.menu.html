@@ -10,37 +10,38 @@
 
     <style>
         h1 {
-            margin: 10px;
+            margin: 15px;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 2em;
         }
 
-        h2 {
-            margin-bottom: 30px;
+        .menu {
+            margin-left: 10px;
+            padding: 10px 0;
+            width: 80%;
+            background: rgb(222, 222, 222);
         }
 
-        a {
+        .menu h2 {
+            margin: 30px 0;
+        }
+
+        .menu h2 a {
             margin-left: 10px;
             color: white;
             padding: 10px;
-            /* creates a text shadow */
+            /* creates a text shadow , you can also give negative number
+                x-length  y-length  blur-size  color*/
             text-shadow: 2px 2px 5px black;
             /* removes the underline */
             text-decoration: none;
         }
 
-        a:hover {
+        .menu h2 a:hover {
             background: powderblue;
             color: rgb(223, 247, 87);
-            width: max-content;
+            width: fit-content;
 
-        }
-
-        section {
-            margin-left: 10px;
-            padding: 30px 0;
-            width: 550px;
-            background: rgb(206, 204, 204);
         }
     </style>
 
@@ -48,14 +49,14 @@
 
 <body>
     <h1>메뉴 만들기</h1>
-    <section>
+    <section class="menu">
         <h2>
             <a href="">[주문] 긴급재난지원금을 쿠x에서 사용할 수 있나요?</a>
         </h2>
         <h2>
             <a href="">다슬기를 키우고 싶은데 어떤 환경이 필요한가요?</a>
         </h2>
-        <h2></h2>
+        <h2>
         <a href="">달팽이가 집을 나갔습니다. 어떻게 하죠??</a>
         </h2>
     </section>
