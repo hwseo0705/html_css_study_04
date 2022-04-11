@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container1 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            margin: 20px;
+            /* follwoing also not recommended but works */
+            /* overflow: hidden; */
+        }
+
+        .container2 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+            margin: 20px;
+            /* follwoing also not recommended but works */
+            /* overflow: hidden; */
+        }
+
+        .container3 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid green;
+            margin: 20px;
+            /* follwoing also not recommended but works */
+            /* overflow: hidden; */
+        }
+
+        /* a good way to fix!!! */
+        /* .container1::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        } */
+
+        /* if multiple to fix */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 20px;
+            /* can't do 'float: left', cuz the parent size changes */
+            float: left;
+        }
+
+        /* .cbox {
+            clear: both;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <!-- .container>.box*3 -->
+    <div class="container1 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- don't do the following -->
+        <!-- <div class="cbox"></div> -->
+    </div>
+    <!-- what if i have a lot to clear....???
+        you don't want to do it multiple times -->
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
