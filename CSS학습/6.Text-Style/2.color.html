@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+
+    <style>
+        div {
+            font-size: 40px;
+        }
+
+        /* should not use the name when assigning colors
+                use rgb(#, #, #), rgba(#, #, #, #), or #color-code (#fff) 
+                use the link in the slide */
+
+        .c1 {
+            /* color: #33ddaa --> color: #3da */
+            color: #3da;
+        }
+
+        .c2 {
+            color: rgb(155, 37, 37);
+        }
+
+        .c3 {
+            color: rgba(58, 200, 193, 0.7);
+        }
+
+        #btn {
+            width: 120px;
+            height: 40px;
+            font-size: 1.5em;
+            background: rgb(54, 228, 77);
+        }
+
+        #btn:hover {
+            /* by using opacity 'rgba' yopu could give it a hover effect */
+            background: rgba(54, 228, 77, 0.6);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- .c${hello!}*3 -->
+    <div class="c1">hello!</div>
+    <div class="c2">hello!</div>
+    <div class="c3">hello!</div>
+
+    <button id="btn">Click!</button>
+
+</body>
+
+</html>
