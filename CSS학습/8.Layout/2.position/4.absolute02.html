@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute 02 Position</title>
+
+    <style>
+        .root {
+            width: 600px;
+            height: 500px;
+            border: 4px dashed orange;
+            padding: 100px;
+            font-size: 30px;
+            /* if you add any position (except for static) in root, 
+                the positions of its children will be relative to root */
+            /* position: relative; */
+        }
+
+        .parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed blue;
+            padding: 50px;
+            /* if you add any position (except for static) in parent, 
+                the positions of its children will be relative to parent */
+            /* if both root and parent have positions, then the closer one will be applied 
+                if both don't exist, then the position will be relative to body*/
+            position: relative;
+        }
+
+        .child {
+            width: 120px;
+            height: 80px;
+            border: 4px dashed red;
+            background: tomato;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .abs {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            /* negative position will make it go out of root */
+        }
+
+        .center-box {
+            /* center box: x-axis & y-axis  */
+            /* child 1 is centered relative to parent (closest position: ~)
+                if position doesn't exist in parent, it will be relative to root (now closest) */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- .root>.parent>.child{$}*3 -->
+    <div class="root">
+        <div class="parent">
+            <div class="child center-box">1</div>
+            <div class="child abs">2</div>
+            <div class="child">3</div>
+        </div>
+    </div>
+</body>
+
+</html>
