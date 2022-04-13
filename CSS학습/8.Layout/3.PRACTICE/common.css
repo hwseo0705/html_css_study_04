@@ -1,0 +1,27 @@
+/* create a common css file that applies to a lot of other file */
+
+/* common style */
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    /* will inherit the parent's color */
+    color: inherit;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'NGothic', Arial, sans-serif;
+    background: #aaa;
+}
+
+#wrapper {
+    width: 60%;
+    background: #fff;
+    margin: 0 auto;
+}
