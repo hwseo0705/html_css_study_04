@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <style>
+        .container {
+            border: 2px solid #000;
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: row-reverse;
+            justify-content: flex-start; */
+            flex-direction: row;
+            /* justify-content: space-between; --> margin in between */
+            /* justify-content: space-around; --> margin in between and sides */
+            /* margin everywhere evenly */
+            justify-content: space-evenly; 
+        }
+
+        .item {
+            width: 150px;
+            height: 100px;
+            border: 4px dashed red;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+</body>
+
+</html>
